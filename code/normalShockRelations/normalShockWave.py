@@ -134,7 +134,3 @@ def calcMachFromOtherValue(f, target, gamma, range):
                                                     return abs(i)
 
     return 0.0
-
-d = normalShockWave(5, 1.4)
-
-print(d)
