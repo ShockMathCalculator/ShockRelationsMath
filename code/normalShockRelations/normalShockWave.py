@@ -41,7 +41,7 @@ class normalShockWave:
         self.gamma = gamma
         
         self.mach1 = mach1
-        self.mach2 = math.sqrt(((gamma - 1.0) * (mach1*mach1) + 2.0) / ((2 *  gamma * (mach1*mach1)) - (gamma - 1)))
+        self.mach2 = math.sqrt(((gamma - 1.0) * (mach1*mach1) + 2.0) / ((2 * gamma * (mach1*mach1)) - (gamma - 1)))
         
         self.p2p1ratio = ((2 * gamma * (mach1*mach1)) - (gamma - 1)) / (gamma + 1)
         self.t2t1ratio = (((2 * gamma * (mach1*mach1)) - (gamma - 1)) * (((gamma - 1) * (mach1*mach1)) + 2)) / (((gamma + 1)*(gamma + 1))*(mach1*mach1))
@@ -107,7 +107,7 @@ def calcP2P1(mach1, gamma):
     return ((2 * gamma * (mach1*mach1)) - (gamma - 1)) / (gamma + 1)
 
 def calcMach2(mach1, gamma):
-    return math.sqrt(((gamma - 1.0) * (mach1*mach1) + 2.0) / ((2 *  gamma * (mach1*mach1)) - (gamma - 1)))
+    return math.sqrt(((gamma - 1.0) * (mach1*mach1) + 2.0) / ((2 * gamma * (mach1*mach1)) - (gamma - 1)))
 
 def calcMachFromOtherValue(f, target, gamma, range):
     biggerTol = 1000000.0; highTol = 100.0; btol = 1.0; atol= 0.001; stol = 0.00001
